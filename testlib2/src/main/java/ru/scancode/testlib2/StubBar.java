@@ -1,5 +1,7 @@
 package ru.scancode.testlib2;
 
+import android.util.Log;
+
 import androidx.annotation.NonNull;
 
 /**
@@ -30,6 +32,10 @@ public class StubBar {
 
 	public void setNum(int num) {
 		this.num = num;
+	}
+
+	public void sayHello(String logtag){
+		Log.d(logtag,"Heelo, my name is "+name);
 	}
 
 	@NonNull
