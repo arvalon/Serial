@@ -28,6 +28,7 @@ import javax.xml.parsers.SAXParser;
 import javax.xml.parsers.SAXParserFactory;
 
 import ru.scancode.testlib.StubFoo;
+import ru.scancode.testlib2.StubBar;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -119,8 +120,11 @@ public class MainActivity extends AppCompatActivity {
 		// Тестирование подключённого модуля
 
 		StubFoo stubFoo = new StubFoo(1,"Mike");
-
 		Logs.info(this,"StubFoo: "+stubFoo);
+
+		StubBar stubBar = new StubBar(2,"John");
+		Logs.info(this,"StubBar: "+stubBar);
+
 	}
 
 	private void checkPermissions() {

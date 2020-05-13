@@ -35,6 +35,6 @@ public class StubFoo {
 	@NonNull
 	@Override
 	public String toString() {
-		return "My name is "+name+", number: "+num+" END";
+		return "My name is "+name+", number: "+num+", END";
 	}
 }
