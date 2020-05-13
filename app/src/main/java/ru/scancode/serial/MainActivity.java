@@ -27,6 +27,7 @@ import javax.xml.parsers.ParserConfigurationException;
 import javax.xml.parsers.SAXParser;
 import javax.xml.parsers.SAXParserFactory;
 
+import ru.scancode.funlib.FunUser;
 import ru.scancode.testlib.StubFoo;
 import ru.scancode.testlib2.StubBar;
 
@@ -119,12 +120,17 @@ public class MainActivity extends AppCompatActivity {
 
 		// Тестирование подключённого модуля
 
+        // Из модуля testlib
 		StubFoo stubFoo = new StubFoo(1,"Mike");
 		Logs.info(this,"StubFoo: "+stubFoo);
 
+        // Из модуля testlib2
 		StubBar stubBar = new StubBar(2,"John");
 		Logs.info(this,"StubBar: "+stubBar);
 
+		// Из AAR
+		FunUser user = new FunUser(3,"Willy");
+		Logs.info(this, "From AAR: "+user);
 	}
 
 	private void checkPermissions() {
