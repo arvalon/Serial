@@ -11,6 +11,7 @@ import android.os.Bundle;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import org.apache.commons.lang3.StringUtils;
 import org.w3c.dom.Document;
 import org.xml.sax.SAXException;
 import org.xml.sax.helpers.DefaultHandler;
@@ -131,6 +132,18 @@ public class MainActivity extends AppCompatActivity {
 		// Из AAR
 		FunUser user = new FunUser(3,"Willy");
 		Logs.info(this, "From AAR: "+user);
+
+		// Apache String Utils
+
+		String str1 = "abc";
+		String str2 = "xxx";
+
+		boolean a = StringUtils.containsAny(str1, str2,"abc");
+		boolean b = StringUtils.containsAny(str1, str2,"zzz");
+		boolean c = StringUtils.equalsAnyIgnoreCase(str1, str2,"abc");
+		boolean d = StringUtils.equalsAnyIgnoreCase(str1, str2,"ab");
+
+		Logs.info(this,"Apache StringUtils.containsAny, a: "+a+", b: "+b+", c: "+c+", d: "+d);
 	}
 
 	private void checkPermissions() {
