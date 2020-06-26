@@ -144,6 +144,8 @@ public class MainActivity extends AppCompatActivity {
 		boolean d = StringUtils.equalsAnyIgnoreCase(str1, str2,"ab");
 
 		Logs.info(this,"Apache StringUtils.containsAny, a: "+a+", b: "+b+", c: "+c+", d: "+d);
+
+		Logs.info(this,"Model: "+Build.MODEL);
 	}
 
 	private void checkPermissions() {

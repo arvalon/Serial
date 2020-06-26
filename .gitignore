@@ -18,6 +18,7 @@
 /.idea/markdown-navigator-enh.xml
 /.idea/runConfigurations.xml
 /.idea/vcs.xml
+/.idea/jarRepositories.xml
 .DS_Store
 /build
 app/build
