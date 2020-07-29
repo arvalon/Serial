@@ -141,6 +141,25 @@ public class MainActivity extends AppCompatActivity {
 		Logs.info(this,"Apache StringUtils.containsAny, a: "+a+", b: "+b+", c: "+c+", d: "+d);
 
 		Logs.info(this,"Model: "+Build.MODEL);
+
+		stupidCasting();
+
+	}
+
+	private void stupidCasting() {
+
+		Logs.info(this,"byte <-> int transform");
+
+		byte[] testArray = new byte[]{1,2,3};
+
+		byte testNum1 = 1;
+		int testNum2 = 2;
+
+		boolean flag1 = testNum1 == testArray[0];
+		Logs.info(this, "flag 1 = "+flag1);
+
+		boolean flag2 = testNum2 == (int)testArray[1];
+		Logs.info(this, "flag 2 = "+flag2);
 	}
 
 	private void checkPermissions() {
