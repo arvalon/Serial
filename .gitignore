@@ -12,5 +12,3 @@ release/
 
 keystore.properties
 /local.properties
-
-/.idea/compiler.xml
