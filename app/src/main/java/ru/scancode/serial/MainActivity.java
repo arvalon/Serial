@@ -11,7 +11,12 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 
+import com.example.getserial.Foo;
+import com.example.getserial.Bar;
+
 public class MainActivity extends AppCompatActivity {
+
+	static final String LOGTAG = "Serial";
 
 	private static final CharSequence LOW_SDK = "Low SDK";
 
@@ -50,6 +55,16 @@ public class MainActivity extends AppCompatActivity {
 
 		Logs.info(this,"Software version: "+Build.FINGERPRINT);
 
+		// тестовое подключение модуля
+
+		NearestFoo nearestFoo = new NearestFoo();
+		nearestFoo.printHelloWorld();
+
+		Foo foo = new Foo();
+		foo.printHelloWorld();
+
+		Bar bar = new Bar();
+		Bar.printHelloWorld();
 	}
 
 	private void checkPermissions() {
