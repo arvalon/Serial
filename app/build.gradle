@@ -18,6 +18,7 @@ android {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            applicationVariants.all { variant -> renameAPK(variant)}
         }
     }
 
@@ -31,6 +32,12 @@ android {
         targetCompatibility = JavaVersion.VERSION_1_8
     }
     namespace 'ru.scancode.serial'
+}
+
+def renameAPK(variant) {
+    variant.outputs.all { output ->
+        outputFileName = "Serial_v_${variant.versionName}".replace('.', "_") + ".apk"
+    }
 }
 
 dependencies {
