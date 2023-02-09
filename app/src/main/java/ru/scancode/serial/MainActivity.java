@@ -11,6 +11,9 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 
+import com.example.getserial.Bar;
+import com.example.getserial.Foo;
+
 public class MainActivity extends AppCompatActivity {
 
 	static final String LOGTAG = "Serial";
@@ -56,6 +59,11 @@ public class MainActivity extends AppCompatActivity {
 
 		NearestFoo nearestFoo = new NearestFoo();
 		nearestFoo.printHelloWorld();
+
+		Bar.printHelloWorld();
+
+		Foo foo = new Foo();
+		foo.printHelloWorld();
 	}
 
 	private void checkPermissions() {
